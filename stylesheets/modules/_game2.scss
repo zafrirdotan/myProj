@@ -1,3 +1,30 @@
 .game2 {
-    
+      
 }
+
+body{
+    //   background: brown;
+    margin: 15px;
+    display: flex;
+  }
+  
+  .leftCont{
+      display: flex;
+      width: 70%;
+      border: 1px solid green;
+  }
+  .leftCont > ul {
+      display: flex;
+      
+  }
+  .leftCont > ul > li {
+      list-style-type: none;
+      width: 15%;
+              
+  }
+  
+  .rightCont{
+      border: 1px solid red;
+    display: flex;
+      
+  }

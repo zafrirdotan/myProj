@@ -2,8 +2,40 @@
 @import "modules/app";
 
 
-body {
-  background-color: orange;
-  color:white;
+// body {
+//   background-color: orange;
+//   color:white;
 
+// }
+.boardContainer{
+  height: 400px;
+  width: 400px;
 }
+.game{
+  height: 170px;
+  width: 170px;
+  display: inline-block;
+  border-radius: 50%;
+  text-align: center;
+  margin: 10px;
+  vertical-align: middle;
+  // display: flex;
+  // align-items: center;
+}
+.game1 {
+  background: blue;
+  color: white;
+}
+.game2 {
+  background: green;
+  color: white;
+}
+.game3 {
+  background: yellow;
+  color: white;
+}
+// .game2{
+//   background: red;
+//   height: 70px;
+//   width: 70px;
+// }
