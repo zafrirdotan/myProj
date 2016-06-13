@@ -6300,6 +6300,14 @@ body {
   background: white;
   border: 1px solid blue; }
 
+#li1, #li2 {
+  background: white;
+  width: 30px;
+  height: 30px;
+  padding: 1px;
+  border: 1px solid #aaaaaa;
+  list-style-type: none; }
+
 .boardContainer {
   border: 1px solid black;
   display: flex;
