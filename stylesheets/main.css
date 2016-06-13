@@ -6231,6 +6231,10 @@ footer {
   text-align: center;
   color: #777; }
 
+.game1 {
+  background-color: blue;
+  height: 1em;
+  width: 1em; }
+
 body {
-  background-color: orange;
-  color: white; }
+  font-size: 16; }
