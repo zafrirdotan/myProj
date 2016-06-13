@@ -6254,18 +6254,24 @@ body {
   border: 1px solid red;
   display: flex; }
 
+body {
+  display: flex;
+  border: 1px solid green;
+  height: 600px;
+  flex-wrap: wrap; }
+
 .boardContainer {
+  border: 1px solid black;
+  display: flex;
   height: 400px;
-  width: 400px; }
+  width: 100%; }
 
 .game {
   height: 170px;
   width: 170px;
-  display: inline-block;
   border-radius: 50%;
   text-align: center;
-  margin: 10px;
-  vertical-align: middle; }
+  margin: 10px; }
 
 .game1 {
   background: blue;
@@ -6278,3 +6284,6 @@ body {
 .game3 {
   background: yellow;
   color: white; }
+
+footer {
+  width: 100%; }

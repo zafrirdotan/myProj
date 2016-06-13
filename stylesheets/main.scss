@@ -2,23 +2,29 @@
 @import "modules/app";
 
 
-// body {
-//   background-color: orange;
-//   color:white;
-
-// }
+body {
+  // background-color: orange;
+  // color:white;
+  display: flex;
+  border: 1px solid green;
+  height: 600px;
+  flex-wrap: wrap;
+  
+}
 .boardContainer{
+  border: 1px solid black;
+  display: flex;
   height: 400px;
-  width: 400px;
+  width: 100%;
 }
 .game{
   height: 170px;
   width: 170px;
-  display: inline-block;
+  // display: inline-block;
   border-radius: 50%;
   text-align: center;
   margin: 10px;
-  vertical-align: middle;
+  // vertical-align: middle;
   // display: flex;
   // align-items: center;
 }
@@ -39,3 +45,6 @@
 //   height: 70px;
 //   width: 70px;
 // }
+footer{
+  width: 100%;
+}
