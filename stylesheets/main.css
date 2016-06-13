@@ -6246,28 +6246,59 @@ footer {
   height: 175rem;
   width: 120rem;
   display: flex;
-  justify-content: center;
-  align-items: flex-start; }
+  justify-content: center; }
+
+.game1Container .cell {
+  color: red; }
 
 body {
+  background: #F7931E;
   margin: 15px;
-  display: flex; }
-
-.leftCont {
   display: flex;
-  width: 70%;
+  flex-direction: column;
+  height: 620px;
+  width: 330px;
+  border: 1px solid blue; }
+
+.downCont {
+  display: flex;
+  width: 100%;
   border: 1px solid green; }
 
-.leftCont > ul {
-  display: flex; }
+.downCont > ul {
+  width: 100%;
+  display: flex;
+  justify-content: space-around; }
 
-.leftCont > ul > li {
+.downCont > ul > li {
+  display: flex;
+  justify-content: space-around;
+  margin: 5px;
   list-style-type: none;
-  width: 15%; }
+  width: 10%;
+  background: white;
+  border: 1px solid blue; }
 
-.rightCont {
-  border: 1px solid red;
-  display: flex; }
+.upCont {
+  display: flex;
+  width: 100%;
+  height: 20%;
+  border: 1px solid red; }
+
+.upCont > ul {
+  width: 100%;
+  display: flex;
+  justify-content: space-around; }
+
+.upCont > ul > li {
+  display: flex;
+  justify-content: space-around;
+  margin: 5px;
+  list-style-type: none;
+  width: 10%;
+  height: 20%;
+  background: white;
+  border: 1px solid blue; }
 
 .boardContainer {
   border: 1px solid black;
