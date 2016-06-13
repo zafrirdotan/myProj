@@ -6237,4 +6237,53 @@ footer {
   width: 1em; }
 
 body {
+<<<<<<< HEAD
   font-size: 16; }
+=======
+  display: flex; }
+
+body {
+  margin: 15px;
+  display: flex; }
+
+.leftCont {
+  display: flex;
+  width: 70%;
+  border: 1px solid green; }
+
+.leftCont > ul {
+  display: flex; }
+
+.leftCont > ul > li {
+  list-style-type: none;
+  width: 15%; }
+
+.rightCont {
+  border: 1px solid red;
+  display: flex; }
+
+.boardContainer {
+  height: 400px;
+  width: 400px; }
+
+.game {
+  height: 170px;
+  width: 170px;
+  display: inline-block;
+  border-radius: 50%;
+  text-align: center;
+  margin: 10px;
+  vertical-align: middle; }
+
+.game1 {
+  background: blue;
+  color: white; }
+
+.game2 {
+  background: green;
+  color: white; }
+
+.game3 {
+  background: yellow;
+  color: white; }
+>>>>>>> df655c1820d0c7112d6d9b7035fbc171ed46d529

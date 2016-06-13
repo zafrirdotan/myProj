@@ -19,5 +19,29 @@ var gChals = [
 
 function getChals() {}
 function getChalById(chalId) {}
-function renderChals() {}
 function reportSolved(chalId){}
+
+
+function renderChals(mat,selector) {
+    var elContainer = document.querySelector(selector);
+    var strHTML ='';
+    mat.forEach(function(chal,i){
+        strHTML += '<div onclick="redirect(this)" id="' +chal.id + '" class="game '+ chal.id + '">'+ chal.name +'</div>';
+    })
+        console.log('str: ',strHTML);
+        elContainer.innerHTML = strHTML;
+        console.log('elContainer: ', elContainer);
+        
+        
+}
+
+
+
+
+renderChals(gChals,'.boardContainer');
+
+function redirect(el){
+    // var id = 
+    console.log('el' ,el.id);
+        
+}
