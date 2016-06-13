@@ -5,4 +5,4 @@ var gState = {
     currChalId: 'game1'
 };
 
-console.log('dfdf');
+// console.log('dfdf');
