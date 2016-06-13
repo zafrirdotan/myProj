@@ -1,13 +1,12 @@
-.game1 {
-<<<<<<< HEAD
-    background-color: blue;
-    height: 1em;
-    width: 1em;
-=======
-  
-}
-
-body{
+.game1Container {
+    border: 1rem solid yellow;
+    height: 175rem;
+    width: 120rem;
     display: flex;
->>>>>>> df655c1820d0c7112d6d9b7035fbc171ed46d529
+    justify-content: center;
+    // align-items: 
+    .cell {
+        color: red;
+    }
 }
+.

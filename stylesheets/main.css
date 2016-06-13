@@ -6212,10 +6212,20 @@ button.close {
     display: none !important; } }
 
 @media (max-width: 767px) {
+  font-size: 11px;
   header {
     text-align: center; }
   header img {
     margin: auto; } }
+
+@media (min-width: 768px) {
+  font-size: 16px; }
+
+@media (min-width: 992px) {
+  font-size: 16px; }
+
+@media (min-width: 1200px) {
+  font-size: 16px; }
 
 header {
   display: flex;
@@ -6231,16 +6241,13 @@ footer {
   text-align: center;
   color: #777; }
 
-.game1 {
-  background-color: blue;
-  height: 1em;
-  width: 1em; }
-
-body {
-<<<<<<< HEAD
-  font-size: 16; }
-=======
-  display: flex; }
+.game1Container {
+  border: 1rem solid yellow;
+  height: 175rem;
+  width: 120rem;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start; }
 
 body {
   margin: 15px;
@@ -6261,12 +6268,6 @@ body {
 .rightCont {
   border: 1px solid red;
   display: flex; }
-
-body {
-  display: flex;
-  border: 1px solid green;
-  height: 600px;
-  flex-wrap: wrap; }
 
 .boardContainer {
   border: 1px solid black;
@@ -6292,10 +6293,6 @@ body {
 .game3 {
   background: yellow;
   color: white; }
-<<<<<<< HEAD
->>>>>>> df655c1820d0c7112d6d9b7035fbc171ed46d529
-=======
 
 footer {
   width: 100%; }
->>>>>>> 509a8769505f72a6e6f89b62fd32b78209dbf571

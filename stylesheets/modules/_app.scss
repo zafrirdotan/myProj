@@ -1,4 +1,6 @@
+// her we well need to set some media-querys for responcivity
 @media(max-width:767px){
+  font-size: 11px;
   header {
     text-align: center;
     img {
@@ -6,9 +8,15 @@
     }  
   }
 }
-@media(min-width:768px){}
-@media(min-width:992px){}
-@media(min-width:1200px){}
+@media(min-width:768px){
+  font-size: 16px;
+}
+@media(min-width:992px){
+  font-size: 16px;
+}
+@media(min-width:1200px){
+  font-size: 16px;
+}
 
 
 header {
