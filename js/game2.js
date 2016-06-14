@@ -54,7 +54,8 @@ function isWin(){
     console.log('t2: ',t2.innerHTML);
     
     if (x1 === 3 && x2 === 7)    alert('WIN');
+    else                         alert('NOT');
     
 }
 // setInterval(function(){isWin();},1000);
-isWin();
+// isWin();
