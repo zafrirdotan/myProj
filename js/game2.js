@@ -1,17 +1,27 @@
-function allowDrop(ev) {
-    ev.preventDefault();
-}
+// function allowDrop(ev) {
+//     ev.preventDefault();
+// }
 
-function drag(ev) {
-    ev.dataTransfer.setData("text", ev.target.id);
-}
 
-function drop(ev) {
-    ev.preventDefault();
-    var data = ev.dataTransfer.getData("text");
-    ev.target.appendChild(document.getElementById(data));
-    isWin();
-}
+
+
+$('#drag1').draggable();
+$('#drag2').draggable();
+$('#li1').droppable();
+    
+    
+    
+    
+// function drag(ev) {
+//     ev.dataTransfer.setData("text", ev.target.id);
+// }
+
+// function drop(ev) {
+//     ev.preventDefault();
+//     var data = ev.dataTransfer.getData("text");
+//     ev.target.appendChild(document.getElementById(data));
+//     isWin();
+// }
 
 function isWin(){
     var a = document.querySelector('.winNums');

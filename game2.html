@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
       <link rel="stylesheet" href="stylesheets/main.css"/>
 
     <title>Document</title>
@@ -13,11 +14,11 @@
         <ul>
             <!--<li>1</li>
             <li>2</li>-->
-            <li id="drag1" class="wiggle-me" draggable="true" ondragstart="drag(event)" >3</li>
+            <li id="drag1" class="wiggle-me">3</li>
             <!--<li>4</li>
             <li>5</li>
             <li>6</li>-->
-            <li id="drag2"  draggable="true" class="wiggle-me" ondragstart="drag(event)" >7</li>
+            <li id="drag2" class="wiggle-me">7</li>
             <!--<li>8</li>
             <li>9</li>
             <li>10</li>-->
@@ -29,11 +30,11 @@
         <ul class="winNums">
             <li>1</li>
             <li>2</li>
-            <div id="li1" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+            <div id="li1" ></div>
             <li>4</li>
             <li>5</li>
             <li>6</li>
-            <div id="li2" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+            <div id="li2"></div>
             <li>8</li>
             <li>9</li>
             <li>10</li>
@@ -43,5 +44,8 @@
     </container>
 </body>
 <script src="lib/jquery/jquery.js"></script>
+<script src="lib/jquery/jquery-ui.min.js"></script>
+<script src="lib/jquery/jquery.ui.touch-punch.min.js"></script>
+
 <script src="js/game2.js"></script>
 </html>
