@@ -14,6 +14,11 @@ var gChals = [
         id: 'game3',
         name: 'The Beach',
         isSolved: false
+    },
+    {
+        id: 'game4',
+        name: 'The Mountain ',
+        isSolved: false
     }
 ];
 
@@ -45,7 +50,13 @@ function init(){
 function getChals() {
     
 }
-function getChalById(chalId) {}
+
+function getChalById(chalId) {
+    var obj = gChals.filter(function ( obj ) {
+    return obj.id === chalId;
+})[0];
+}
+
 function reportSolved(chalId){}
 
 

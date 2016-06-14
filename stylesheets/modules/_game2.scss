@@ -23,20 +23,20 @@
     
   }
   
-  .downCont{
+  .downCont2{
       display: flex;
       width: 95%;
       height: 50%;
       border: 1px solid green;
   }
-  .downCont > ul {
+  .downCont2 > ul {
       width: 100%;
       display: flex;
       justify-content: space-around;
       flex-wrap: wrap;
       
   }
-  .downCont > ul > li {
+  .downCont2 > ul > li {
       display: flex;
       justify-content: space-around;
       margin: 5px;
@@ -60,19 +60,19 @@
               
   }
   
-  .upCont{
+  .upCont2{
       display: flex;
       width: 95%;
       height: 20%;
       border: 1px solid red;
   }
-   .upCont > ul {
+   .upCont2 > ul {
       width: 100%;
       display: flex;
       justify-content: space-around;
       
   }
-   .upCont > ul > li {
+   .upCont2 > ul > li {
       display: flex;
       justify-content: space-around;
       margin: 2px;

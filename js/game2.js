@@ -86,8 +86,15 @@ function isWin(){
             if ( x !== i) win = false;
             i++;
         });
-    if (win) alert('WIN')
-    else alert('NOT');
+    if (win){
+        alert('WIN');
+        // var obj = getChalsById('game2');
+        gState.currChalId = 'game3';
+        gChals[1].isSolved = true;
+    }
+    else{
+        alert('NOT');  
+    } 
 }
 // setInterval(function(){isWin();},1000);
 // isWin();
