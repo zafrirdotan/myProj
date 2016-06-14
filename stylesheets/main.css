@@ -6262,13 +6262,10 @@ container {
   margin: 15px;
   display: flex;
   flex-direction: column;
-<<<<<<< HEAD
   height: 95vh;
   width: 95vw;
-=======
   height: 100%;
   width: 100%;
->>>>>>> refs/remotes/origin/master
   border: 1px solid blue; }
 
 .downCont {
