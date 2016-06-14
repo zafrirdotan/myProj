@@ -10,11 +10,7 @@ $('#drag1').draggable({
     opacity: 0.5,
     revert: 'invalid',
     drop: function(event,ui){
-        // $(ui.draggable).animate({backgroundColor:'#4E1402'}, 300);
         $(ui.draggable).css({maxHeight: $(this.height)});
-        // $(ui.draggable).css('background','blue');
-        
-        
     }
 });
 $('#drag2').draggable({
@@ -28,12 +24,12 @@ $('#li1').droppable({
         $('#li1').replaceWith('<li>3<li>');
         // $('#li1').remove();
         $(".winNums li").eq(3).remove();
-        console.log('ui.draggable:',ui.draggable);
-        console.log('e:',e);
-        console.log('ui:',ui);
+        // console.log('ui.draggable:',ui.draggable);
+        // console.log('e:',e);
+        // console.log('ui:',ui);
+        isWin();
         
         
-        //get size of parent and applay to droppable
     }
 });
 $('#li2').droppable({
@@ -42,7 +38,7 @@ $('#li2').droppable({
         $('#li2').replaceWith('<li>7<li>');
         // $('#li2').remove();
         $(".winNums li").eq(7).remove();
-        
+        isWin();
         
     }
 });
