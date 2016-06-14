@@ -43,5 +43,14 @@ renderChals(gChals,'.boardContainer');
 function redirect(el){
     // var id = 
     console.log('el' ,el.id);
+    var str ='';
+    str+=el.id + '.html';
+    str = '/C:/coding%20acadmy/sprint2/' + str;
+    console.log('str:',str);
+    var pathname = window.location.pathname;
+    console.log('pathname:',pathname);
+    
+    window.location = str;
+    
         
 }
