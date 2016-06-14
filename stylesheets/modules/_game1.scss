@@ -3,10 +3,45 @@
     height: 100%;
     width: 100%;
     display: flex;
-    justify-content: center;
-    // align-items: 
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+
+   
     .cell {
         color: red;
     }
 }
 
+.game1Img{
+    
+    width: 80rem;
+    height: 60rem;
+    border: 0.1rem solid yellow;
+    img{
+        width: 100%;
+        height: 100%;
+    }
+     
+}
+.game1Ans{
+    
+    width: 80rem;
+    height: 50rem;
+    border: 0.1rem solid yellow;
+   magin-up: -10rem;
+    .ans1{
+        width: 80rem;
+        height: 50%;
+        border: 0.1rem solid black;
+        font-size: 6rem;
+      
+    
+    }     
+     .ans2{
+        width: 80rem;
+        height: 50%;
+        border: 0.1rem solid black;
+        font-size: 6rem;
+    }     
+}
