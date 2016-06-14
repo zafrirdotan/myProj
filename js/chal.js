@@ -17,7 +17,26 @@ var gChals = [
     }
 ];
 
-function getChals() {}
+progress();
+function progress(){
+    var game1 = $('#game1');
+    var game2 = $('#game2');
+    // game2.click = null;
+    console.log('game1: ',game1);
+    console.log('gstate: ',gState);
+    
+    
+    
+    // $(function () {
+    // $("#game2").click(function(){alert('test');});
+    // $("#game2").off('click');
+
+// });
+    
+}
+function getChals() {
+    
+}
 function getChalById(chalId) {}
 function reportSolved(chalId){}
 
@@ -41,16 +60,24 @@ function renderChals(mat,selector) {
 renderChals(gChals,'.boardContainer');
 
 function redirect(el){
-    // var id = 
-    console.log('el' ,el.id);
-    var str ='';
-    str+=el.id + '.html';
-    str = '/C:/coding%20acadmy/sprint2/' + str;
-    console.log('str:',str);
-    var pathname = window.location.pathname;
-    console.log('pathname:',pathname);
     
-    window.location = str;
+   
+    console.log('state.currChalId: ' ,gState.currChalId);
+       
+   
+    
+    console.log('el' ,el.id);
+    if (el.id === gState.currChalId){
+        var str ='';
+        str+=el.id + '.html';
+        str = '/C:/coding%20acadmy/sprint2/' + str;
+        console.log('str:',str);
+        var pathname = window.location.pathname;
+        console.log('pathname:',pathname);
+        window.location = str;
+        
+    } else {alert('YOU HAVE NOT PASSED PREV GAME')}
+    
     
         
 }
