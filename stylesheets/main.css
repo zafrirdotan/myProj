@@ -6211,22 +6211,6 @@ button.close {
   .hidden-print {
     display: none !important; } }
 
-@media (max-width: 767px) {
-  font-size: 11px;
-  header {
-    text-align: center; }
-  header img {
-    margin: auto; } }
-
-@media (min-width: 768px) {
-  font-size: 16px; }
-
-@media (min-width: 992px) {
-  font-size: 16px; }
-
-@media (min-width: 1200px) {
-  font-size: 16px; }
-
 body {
   height: 174rem;
   width: 98rem;
@@ -6251,10 +6235,39 @@ footer {
   height: 100%;
   width: 100%;
   display: flex;
-  justify-content: center; }
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center; }
 
 .game1Container .cell {
   color: red; }
+
+.game1Img {
+  width: 80rem;
+  height: 60rem;
+  border: 0.1rem solid yellow; }
+
+.game1Img img {
+  width: 100%;
+  height: 100%; }
+
+.game1Ans {
+  width: 80rem;
+  height: 50rem;
+  border: 0.1rem solid yellow;
+  magin-up: -10rem; }
+
+.game1Ans .ans1 {
+  width: 80rem;
+  height: 50%;
+  border: 0.1rem solid black;
+  font-size: 6rem; }
+
+.game1Ans .ans2 {
+  width: 80rem;
+  height: 50%;
+  border: 0.1rem solid black;
+  font-size: 6rem; }
 
 html {
   height: 100%; }
@@ -6361,6 +6374,20 @@ container {
   -moz-animation: wiggle .3s 2;
   -webkit-animation: wiggle 2s 2;
   animation: wiggle 2s 2; }
+
+@media (max-width: 767px) {
+  font-size: 11px;
+  header {
+    text-align: center; }
+  header img {
+    margin: auto; } }
+
+@media (min-width: 922px) {
+  font-size: 16px;
+  body {
+    height: 300rem;
+    width: 700rem;
+    border: 0.1rem solid black; } }
 
 .boardContainer {
   border: 1px solid black;
