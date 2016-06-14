@@ -4,10 +4,25 @@
 
 
 
-
-$('#drag1').draggable();
-$('#drag2').draggable();
-$('#li1').droppable();
+$(document).ready(function(){
+    
+$('#drag1').draggable({
+   revert: 'invalid'
+});
+$('#drag2').draggable({
+   revert: 'invalid'    
+});
+$('#li1').droppable({
+    drop: function(e,ui){
+        $(ui.draggable).css('position', 'static').appendTo(this);
+    }
+});
+$('#li2').droppable({
+    drop: function(e,ui){
+        $(ui.draggable).css('position','static').appendTo(this);
+    }
+});
+});
     
     
     
@@ -41,5 +56,5 @@ function isWin(){
     if (x1 === 3 && x2 === 7)    alert('WIN');
     
 }
-
+// setInterval(function(){isWin();},1000);
 isWin();

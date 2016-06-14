@@ -6264,8 +6264,6 @@ container {
   flex-direction: column;
   height: 95vh;
   width: 95vw;
-  height: 100%;
-  width: 100%;
   border: 1px solid blue; }
 
 .downCont {
