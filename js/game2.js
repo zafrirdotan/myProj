@@ -7,14 +7,25 @@
 $(document).ready(function(){
     
 $('#drag1').draggable({
-   revert: 'invalid'
+    opacity: 0.5,
+    revert: 'invalid',
+    drop: function(event,ui){
+        $(ui.draggable).css({maxHeight: $(this.height)});
+        
+    }
 });
 $('#drag2').draggable({
-   revert: 'invalid'    
+    opacity: 0.5,    
+    revert: 'invalid'    
 });
 $('#li1').droppable({
     drop: function(e,ui){
         $(ui.draggable).css('position', 'static').appendTo(this);
+        // $(ui.draggable).attr('class','').addClass('b')
+        
+        console.log('ui.draggable:',ui.draggable);
+        
+        //get size of parent and applay to droppable
     }
 });
 $('#li2').droppable({
