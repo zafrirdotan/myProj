@@ -17,13 +17,21 @@ var gChals = [
     }
 ];
 
-progress();
-function progress(){
-    var game1 = $('#game1');
-    var game2 = $('#game2');
-    // game2.click = null;
-    console.log('game1: ',game1);
-    console.log('gstate: ',gState);
+function init(){
+    $('.firstLayer').css('zIndex',0);
+    $('.firstLayer').hide();
+    
+    $('.boardContainer').css('zIndex',1);
+    
+}
+
+// progress();
+// function progress(){
+//     var game1 = $('#game1');
+//     var game2 = $('#game2');
+//     // game2.click = null;
+//     console.log('game1: ',game1);
+//     console.log('gstate: ',gState);
     
     
     
@@ -33,7 +41,7 @@ function progress(){
 
 // });
     
-}
+// }
 function getChals() {
     
 }
