@@ -6251,18 +6251,23 @@ footer {
 .game1Container .cell {
   color: red; }
 
+html {
+  height: 100%; }
+
 body {
-  background: #F7931E;
+  background: url("../img/background.jpg");
+  background-size: cover;
   margin: 15px;
   display: flex;
   flex-direction: column;
-  height: 620px;
-  width: 330px;
+  height: 100%;
+  width: 100%;
   border: 1px solid blue; }
 
 .downCont {
   display: flex;
   width: 100%;
+  height: 30%;
   border: 1px solid green; }
 
 .downCont > ul {
@@ -6275,14 +6280,16 @@ body {
   justify-content: space-around;
   margin: 5px;
   list-style-type: none;
-  width: 10%;
+  width: 30%;
+  height: 15%;
   background: white;
-  border: 1px solid blue; }
+  border: 1px solid blue;
+  font-size: 3em; }
 
 .upCont {
   display: flex;
   width: 100%;
-  height: 20%;
+  height: 30%;
   border: 1px solid red; }
 
 .upCont > ul {
@@ -6297,16 +6304,20 @@ body {
   list-style-type: none;
   width: 10%;
   height: 20%;
+  font-size: 3em;
   background: white;
   border: 1px solid blue; }
 
 #li1, #li2, #drag1, #drag2 {
   background: white;
-  width: 30px;
-  height: 20px;
+  width: 30%;
+  height: 15%;
   padding: 1px;
   border: 1px solid #aaaaaa;
   list-style-type: none; }
+
+#drag1, #drag2 {
+  width: 10%; }
 
 @-ms-keyframes wiggle {
   0% {
