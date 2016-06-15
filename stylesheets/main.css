@@ -6489,7 +6489,10 @@ footer {
   z-index: 1;
   width: 33%;
   height: 33%;
-  border: 0.1rem solid black; }
+  border: 0.1rem solid black;
+  font-size: 8rem;
+  padding: 5rem;
+  text-align: center; }
 
 .game3Ans {
   width: 90rem;
@@ -6502,7 +6505,10 @@ footer {
 .ans {
   width: 29.6rem;
   height: 23rem;
-  border: 0.1rem solid green; }
+  border: 0.1rem solid blue;
+  font-size: 8rem;
+  padding: 5rem;
+  text-align: center; }
 
 .game4container {
   background: url("../img/background_game4.png");
