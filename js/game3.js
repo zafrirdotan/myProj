@@ -1,7 +1,15 @@
+var gLevels = [
+    {
+        level: 1,
+        upToNum: 10
+    }
+];
+var gCurrLevel = 1;
+
 $(document).ready(function(){
     renderImg()
-    randerGrid()
-    randerAnss()
+    creatQues()
+   
 })
 
 function renderImg() {
@@ -11,26 +19,42 @@ function renderImg() {
     $('.game3Img').html(strHTMLImg);
 }
 
-function randerGrid() {
-    var strHTML ='';
-    var container = document.querySelector('.game3grid');
-    for (var i = 0; i < 9; i++) {
-        strHTML += '<div class="grid" id='+ (i+1) +'></div>'
-    }
-    console.log('container: ', container);
-    console.log('strHTML: ', strHTML);
+
+
+
+
+
+function creatQues() {
+   
+    var gArrOfAns = [];
     
-    container.innerHTML = strHTML;
+    var strQues;
+    var a;
+    var b;
+    var ans;
+    var strHTMLQues ='';
+    var containerQues = document.querySelector('.game3grid');
+    
+    var strHTMLAns = '';
+    var containerAns = document.querySelector('.game3Ans');
+
+    for (var i = 0; i < 9; i++) {
+        a = Math.ceil(Math.random()*10);
+        b = Math.ceil(Math.random()*10);
+        ans = a + b;
+        strQues = a + '+' + b;
+        strHTMLQues += '<div class="grid" id='+ (i+1) +' data-ans="'+ ans +'" >' + a + '+' + b  + '</div>';
+        gArrOfAns.push(ans);
+
+    }
+    containerQues.innerHTML = strHTMLQues;
+    gArrOfAns.sort(function(a,b){
+        return a-b;
+    })
+
+    gArrOfAns.forEach(function(ans, j) {
+        strHTMLAns += '<div class="ans" id='+ (j+1) +' draggable="true" ondragstart="drag(this)" >' + ans + '</div>';   
+        });           
+    containerAns.innerHTML = strHTMLAns;
 }
 
-function randerAnss() {
-    var strHTML ='';
-    var container = document.querySelector('.game3Ans');
-    for (var i = 0; i < 9; i++) {
-        strHTML += '<div class="ans" id='+ (i+1) +'></div>'
-    }
-    console.log('container: ', container);
-    console.log('strHTML: ', strHTML);
-    
-    container.innerHTML = strHTML;
-}
