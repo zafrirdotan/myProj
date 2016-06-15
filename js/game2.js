@@ -1,100 +1,92 @@
-// function allowDrop(ev) {
-//     ev.preventDefault();
-// }
-
-
-
-$(document).ready(function(){
-    
-$('#drag1').draggable({
-    opacity: 0.5,
-    revert: 'invalid',
-    drop: function(event,ui){
-        $(ui.draggable).css({maxHeight: $(this.height)});
+var numToPlace = [];
+function renderUpContain(){
+    var elContainer = document.querySelector('.upCont2');
+    var strHTML ='<ul>'
+    for (var i = 1;i < 3;i++){
+        var rand = parseInt((Math.random()*10)+1);
+        numToPlace.push(rand);
+        strHTML += '<li id=drag' + i +' class="wiggle-me">'+ rand + '</li>';
     }
-});
-$('#drag2').draggable({
-    opacity: 0.5,    
-    revert: 'invalid'    
-});
-$('#li1').droppable({
-    drop: function(e,ui){
-        $(ui.draggable).css('position', 'static').appendTo(this);
-        // $(ui.draggable).attr('class','').addClass('b')
-        $('#li1').replaceWith('<li>3<li>');
-        // $('#li1').remove();
-        $(".winNums li").eq(3).remove();
-        // console.log('ui.draggable:',ui.draggable);
-        // console.log('e:',e);
-        // console.log('ui:',ui);
-        isWin();
-        
-        
-    }
-});
-$('#li2').droppable({
-    drop: function(e,ui){
-        $(ui.draggable).css('position','static').appendTo(this);
-        $('#li2').replaceWith('<li>7<li>');
-        // $('#li2').remove();
-        $(".winNums li").eq(7).remove();
-        isWin();
-        
-    }
-});
-});
-    
-    
-    
-    
-// function drag(ev) {
-//     ev.dataTransfer.setData("text", ev.target.id);
-// }
+        elContainer.innerHTML = strHTML;
+        console.log('strHTML: ',strHTML);
+}
 
-// function drop(ev) {
-//     ev.preventDefault();
-//     var data = ev.dataTransfer.getData("text");
-//     ev.target.appendChild(document.getElementById(data));
-//     isWin();
-// }
+function renderDownContain(){
+    var elContainer = document.querySelector('.downCont2');
+    var strHTML ='<ul class=winNums>';
+    for (var i = 1;i < 11;i++){
+        // var rand = parseInt((Math.random()*10)+1)
+        if (i === numToPlace[0]){
+            strHTML += '<li id="li'+ 1 +'"></li>';
+        } else if (i === numToPlace[1]){
+            strHTML += '<li id="li'+ 2 +'"></li>';
+        } else {
+            strHTML += '<li>'+ i + '</li>';
+            
+        }
+    }
+        elContainer.innerHTML = strHTML;
+        console.log('strHTML: ',strHTML);
+}
+renderUpContain();
+renderDownContain();
+readyDragDrop();
 
+
+function readyDragDrop(){
+    var dragNum1 = $('#drag1').html();
+    console.log('dragNum1: ',dragNum1);
+    var dragNum2 = $('#drag2').html();
+    console.log('dragNum2: ',dragNum2);
+    
+    $('#drag1').draggable({
+        opacity: 0.5,
+        revert: 'invalid',
+        drop: function (event, ui) {
+            $(ui.draggable).css({ maxHeight: $(this.height) });
+        }
+    });
+    $('#drag2').draggable({
+        opacity: 0.5,
+        revert: 'invalid'
+    });
+    $('#li1').droppable({
+        drop: function (e, ui) {
+            $(ui.draggable).css('position', 'static').appendTo(this);
+            $('#li1').replaceWith('<li>'+dragNum1 +'<li>');
+            $(".winNums li").eq(dragNum1).remove();
+            isWin();
+
+        }
+    });
+    $('#li2').droppable({
+        drop: function (e, ui) {
+            $(ui.draggable).css('position', 'static').appendTo(this);
+            $('#li2').replaceWith('<li>'+dragNum2 +'<li>');
+            $(".winNums li").eq(dragNum2).remove();
+            isWin();
+
+        }
+    });
+}
+
+ 
 function isWin(){
-    // var a = document.querySelector('.winNums');
-    // var li1 = document.querySelector('#li1');
-    // var li2 = document.querySelector('#li2');
-    // var t1 = document.querySelector('#drag1');
-    // var t2 = document.querySelector('#drag2');
-    // var x1 = parseInt(li1.innerText);
-    // var x2 = parseInt(li2.innerText);
     
-    
-    // console.log('x1: ',x1);
-    // console.log('li2: ',li2.innerText);
-    // console.log('t1: ',t1.innerHTML);
-    // console.log('t2: ',t2.innerHTML);
-    
-    // if (x1 === 3 && x2 === 7)    alert('WIN');
-    // else                         alert('NOT');
-    // for (var i = 1;i <11;i++){
-        
-    // }
     var win = true;
     var i = 1;
     $("li").each(function(){
-            // console.log(($(this).text()));
             var x = parseInt($(this).text())
             if ( x !== i) win = false;
             i++;
         });
     if (win){
         alert('WIN');
-        // var obj = getChalsById('game2');
         gState.currChalId = 'game3';
         gChals[1].isSolved = true;
     }
     else{
-        alert('NOT');  
+        console.log('not win yet');
+          
     } 
 }
-// setInterval(function(){isWin();},1000);
-// isWin();
