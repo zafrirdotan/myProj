@@ -3,7 +3,7 @@ var gChals = [
     {
         id: 'game1',
         name: 'The Garden',
-        isSolved: false
+        isSolved: true
     },
     {
         id: 'game2',
@@ -21,35 +21,27 @@ var gChals = [
         isSolved: false
     }
 ];
-
 function init(){
+    if(localStorage.getItem('player') === null){
+        
+        localStorage.setItem('player',JSON.stringify(gChals));        
+        renderChals(gChals,'.boardContainer');
+        
+    } else{
+        removeLayer();
+        renderChals(gChals,'.boardContainer');
+    }
+}
+
+function removeLayer(){
     $('.firstLayer').css('zIndex',0);
     $('.firstLayer').hide();
     $('.boardContainer').css('zIndex',1);
     renderChals(gChals,'.boardContainer');
-    var name = prompt('enter your name');
-    localStorage.setItem('currname',name);    
-    localStorage.setItem(name,JSON.stringify(gChals));
-      
 }
 
-// progress();
-// function progress(){
-//     var game1 = $('#game1');
-//     var game2 = $('#game2');
-//     // game2.click = null;
-//     console.log('game1: ',game1);
-//     console.log('gstate: ',gState);
-    
-    
-    
-    // $(function () {
-    // $("#game2").click(function(){alert('test');});
-    // $("#game2").off('click');
 
-// });
-    
-// }
+
 function getChals() {
     
 }
@@ -60,7 +52,9 @@ function getChalById(chalId) {
 })[0];
 }
 
-function reportSolved(chalId){}
+function reportSolved(chalId){
+    
+}
 
 
 function renderChals(mat,selector) {
@@ -72,23 +66,25 @@ function renderChals(mat,selector) {
         console.log('str: ',strHTML);
         elContainer.innerHTML = strHTML;
         console.log('elContainer: ', elContainer);
-        
-        
+    
 }
 
-
-
-
-
 function redirect(el){
+    console.log('el id' ,el.id);
+    var gChal = JSON.parse(localStorage.getItem('player'));
+    console.log('gchal before is: ',gChal);
+    var num = el.id;
+    var num2 = num.charAt(4);
+    num2--;
+    num2 = 'game' + num2;
+    console.log('num2 is: ',num2);
     
-   
-    console.log('state.currChalId: ' ,gState.currChalId);
-       
-   
+    var currlevel = gChal.filter(function(cell){
+        return (cell.id === num2)
+    });
     
-    console.log('el' ,el.id);
-    if (el.id === gState.currChalId){
+    console.log('currlevel',currlevel[0].isSolved);
+    if (currlevel[0].isSolved){
         var str ='';
         str+=el.id + '.html';
         str = '/C:/coding%20acadmy/sprint2/' + str;

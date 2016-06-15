@@ -1,10 +1,10 @@
 var numToPlace = [];
-var gChals = JSON.parse(localStorage.getItem('daniel'));
+// var gChals = JSON.parse(localStorage.getItem('daniel'));
 
 function init(){
     // console.log('userRecord: ', userRecord);
     // console.log('res',userRecord[1]);
-    console.log('gchals: ',gChals);
+    // console.log('gchals: ',gChals);
     
     
 }
@@ -90,10 +90,17 @@ function isWin(){
         });
     if (win){
         alert('WIN');
-        gChals.currChalId = 'game3';
-        gChals[1].isSolved = true;
-        localStorage.setItem('daniel',JSON.stringify(gChals));
-        console.log('gchals after win: ',gChals);
+        // gChals.currChalId = 'game3';
+        // gChals[1].isSolved = true;
+        // localStorage.setItem('daniel',JSON.stringify(gChals));
+        // var currName = JSON.parse(localStorage.getItem('player'));
+        var gChal = JSON.parse(localStorage.getItem('player'));
+        gChal[1].isSolved = true;
+        localStorage.setItem('player', JSON.stringify(gChal));
+    //  console.log('after game 1 gchals',gChal);
+        console.log('gchals after win: ',gChal);
+        str = '/C:/coding%20acadmy/sprint2/index.html';
+        window.location = str;
         
         
     }

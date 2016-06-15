@@ -33,8 +33,7 @@ var gCurrQues = 0;
 
 $(document).ready(function(){    
 
-var currChal = JSON.parse(localStorage.getItem('name'))
-console.log('currChal: ', currChal);
+// console.log('gChal: ', currName);
 renderQues(gGame1Quess, gCurrQues);
 
 
@@ -93,7 +92,11 @@ function button1Clicked(value, id) {
 
         if (gCurrQues === gGame1Quess.length){
              alert('end of the game');
-             localStorage.setItem('name', JSON.stringify(gCurrQues));
+            //  var currName = JSON.parse(localStorage.getItem('currName'));
+             var gChal = JSON.parse(localStorage.getItem('player'))
+            //   localStorage.setItem('name', JSON.stringify(gCurrQues));
+             console.log('after game 1 gchals',gChal);
+            
         }
 
         setTimeout(function(){ 
@@ -129,7 +132,18 @@ function button2Clicked(value, id) {
         
         gCurrQues++;
 
-        if (gCurrQues === gGame1Quess.length) alert('end of the game');
+        if (gCurrQues === gGame1Quess.length) {
+            alert('end of the game');
+            //  var currName = JSON.parse(localStorage.getItem('currName'));
+             var gChal = JSON.parse(localStorage.getItem('player'));
+             gChal[0].isSolved = true;
+             localStorage.setItem('player', JSON.stringify(gChal));
+             console.log('after game 1 gchals',gChal);
+             str = '/C:/coding%20acadmy/sprint2/index.html';
+             window.location = str;
+
+        }
+        
         setTimeout(function(){ 
             renderQues(gGame1Quess, gCurrQues);
             $('.ans2').removeClass('rightAns');
