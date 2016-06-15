@@ -6268,11 +6268,20 @@ footer {
 .game1Ans .ans1.wrongAns {
   border: 0.5rem solid red; }
 
+.game1Ans .ans1.rightAns {
+  border: 0.5rem solid blue; }
+
 .game1Ans .ans2 {
   width: 85rem;
   height: 50%;
   border: 0.1rem solid black;
   font-size: 6rem; }
+
+.game1Ans .ans2.wrongAns {
+  border: 0.5rem solid red; }
+
+.game1Ans .ans2.rightAns {
+  border: 0.5rem solid blue; }
 
 .game2container {
   background: url("../img/background.jpg");
@@ -6437,6 +6446,63 @@ footer {
   -moz-animation: wiggle .3s 2;
   -webkit-animation: wiggle 2s 2;
   animation: wiggle 2s 2; }
+
+.game3Container {
+  border: 0.1rem solid yellow;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center; }
+
+.game3Container .cell {
+  color: red; }
+
+.game3Img {
+  width: 90rem;
+  height: 70rem;
+  margin-top: 0rem;
+  margin-bottom: -24rem; }
+
+.game3Img img {
+  z-index: 0;
+  width: 100%;
+  height: 100%;
+  border: 0.5rem solid black; }
+
+.game3grid {
+  width: 90rem;
+  height: 70rem;
+  margin-top: 0rem;
+  margin-bottom: -24rem;
+  position: absolute;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  z-index: 1;
+  top: 15rem;
+  left: 4rem;
+  border: 0.5rem solid black; }
+
+.game3grid .grid {
+  z-index: 1;
+  width: 33%;
+  height: 33%;
+  border: 0.1rem solid black; }
+
+.game3Ans {
+  width: 90rem;
+  height: 69rem;
+  border: 0.5rem solid black;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center; }
+
+.ans {
+  width: 29.6rem;
+  height: 23rem;
+  border: 0.1rem solid green; }
 
 .game4container {
   background: url("../img/background_game4.png");

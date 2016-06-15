@@ -1,4 +1,6 @@
 
+
+
 var gGame1Quess = [
     {
         name: 'DoraStar',
@@ -27,9 +29,15 @@ var gGame1Quess = [
 
 ];
 
+var gCurrQues = 0;
+
 $(document).ready(function(){    
-var i = 0;
-renderQues(gGame1Quess, i);
+
+var currChal = JSON.parse(localStorage.getItem('name'))
+console.log('currChal: ', currChal);
+renderQues(gGame1Quess, gCurrQues);
+
+
 });
 
 function renderQues(arrOfQuess, i) {
@@ -68,19 +76,69 @@ function renderQues(arrOfQuess, i) {
     $('.ans2').val(strVALAns2);
 }
 
-function button1Clicked(value) {
-   console.log(value);
-   console.log(typeof($.parseJSON(value)));
 
-//    var pushedWrongAns = false;
-   if( $.parseJSON(value) ){
-    //    if()
+
+
+function button1Clicked(value, id) {
+   console.log('id: ', id);
+   console.log('value: ', value, typeof(value));
+
+
+   if( value === 'true' ){
+        console.log('pushedRightgAns');
+        
+        $('.ans1').addClass('rightAns');
+        
+        gCurrQues++;
+
+        if (gCurrQues === gGame1Quess.length){
+             alert('end of the game');
+             localStorage.setItem('name', JSON.stringify(gCurrQues));
+        }
+
+        setTimeout(function(){ 
+            renderQues(gGame1Quess, gCurrQues);
+            $('.ans1').removeClass('rightAns');
+            $('.ans2').removeClass('wrongAns');
+        }, 3000);
 
    }else{
-   
+        console.log('pushedWrongAns');  
         $('.ans1').addClass('wrongAns');
-        console.log($('.ans1'));
-        pushedWrongAns = true;
+
+   }     
+}
+
+
+
+
+
+
+
+
+
+function button2Clicked(value, id) {
+   console.log('id: ', id);
+   console.log('value: ', value ,typeof(value));
+   
+
+   if( value === 'true' ){
+        console.log('pushedRightgAns');
         
+        $('.ans2').addClass('rightAns');
+        
+        gCurrQues++;
+
+        if (gCurrQues === gGame1Quess.length) alert('end of the game');
+        setTimeout(function(){ 
+            renderQues(gGame1Quess, gCurrQues);
+            $('.ans2').removeClass('rightAns');
+            $('.ans1').removeClass('wrongAns');
+        }, 3000);
+
+   }else{
+        console.log('pushedWrongAns');  
+        $('.ans2').addClass('wrongAns');
+
    }     
 }

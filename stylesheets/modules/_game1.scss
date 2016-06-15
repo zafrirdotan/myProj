@@ -42,11 +42,21 @@
     .ans1.wrongAns{ 
         border: 0.5rem solid red;
     }
+    .ans1.rightAns{ 
+        border: 0.5rem solid blue;
+    }
      .ans2{
         width: 85rem;
         height: 50%;
         border: 0.1rem solid black;
         font-size: 6rem;
-    }     
+     }
+    .ans2.wrongAns{ 
+    border: 0.5rem solid red;
+    }
+    .ans2.rightAns{ 
+    border: 0.5rem solid blue;
+    }
+         
 }
         
