@@ -32,7 +32,12 @@ var gGame1Quess = [
 var gCurrQues = 0;
 
 $(document).ready(function(){    
+
+var currChal = JSON.parse(localStorage.getItem('name'))
+console.log('currChal: ', currChal);
 renderQues(gGame1Quess, gCurrQues);
+
+
 });
 
 function renderQues(arrOfQuess, i) {
@@ -86,7 +91,11 @@ function button1Clicked(value, id) {
         
         gCurrQues++;
 
-        if (gCurrQues === gGame1Quess.length) alert('end of the game');
+        if (gCurrQues === gGame1Quess.length){
+             alert('end of the game');
+             localStorage.setItem('name', JSON.stringify(gCurrQues));
+        }
+
         setTimeout(function(){ 
             renderQues(gGame1Quess, gCurrQues);
             $('.ans1').removeClass('rightAns');
