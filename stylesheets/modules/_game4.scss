@@ -22,8 +22,8 @@
 .upCont4{
       display: flex;
       width: 95%;
-      height: 60%;
-      border: 1px solid green;
+      height: 80%;
+    //   border: 1px solid green;
     //   background: url('../img/background_game4.png');
     //   background-size: cover;
       z-index: 0;
@@ -41,24 +41,25 @@
       display: flex;
       width: 95%;
       height: 15%;
-      border: 1px solid red;
+    //   border: 1px solid red;
       z-index: 0;
       
   }
   
   .downCont4 > ul{
-    width: 80%;
+    width: 100%;
     display: flex;
     flex-direction: row;
     justify-content: space-around;
-    align-items: center;
+    align-items: flex-end;
+    // align-items: center;
   }
   
   .downCont4 > ul > li{
     list-style-type: none;
     background: yellow;
     color: blue;
-    padding: 10px;
+    padding: 15px 20px;
     border-radius: 50%;
     border: 3px solid blue;
   }

@@ -6290,11 +6290,21 @@ footer {
   height: 50%;
   border: 1px solid green; }
 
+@media (min-width: 767px) {
+  .downCont2 {
+    width: 80%;
+    flex-wrap: nowrap; } }
+
 .downCont2 > ul {
-  width: 100%;
+  width: 70%;
   display: flex;
   justify-content: space-around;
   flex-wrap: wrap; }
+
+@media (min-width: 767px) {
+  .downCont2 > ul {
+    width: 100%;
+    flex-wrap: nowrap; } }
 
 .downCont2 > ul > li {
   display: flex;
@@ -6302,7 +6312,7 @@ footer {
   margin: 5px;
   list-style-type: none;
   width: 20%;
-  height: 15%;
+  height: 20%;
   color: blue;
   background: #ffaf4b;
   background: -moz-linear-gradient(left, #ffaf4b 0%, #ff920a 100%);
@@ -6396,23 +6406,6 @@ footer {
   -webkit-animation: wiggle 2s 2;
   animation: wiggle 2s 2; }
 
-.b {
-  margin: 5px;
-  list-style-type: none;
-  width: 20%;
-  height: 15%;
-  color: blue;
-  background: #ffaf4b;
-  background: -moz-linear-gradient(left, #ffaf4b 0%, #ff920a 100%);
-  background: -webkit-gradient(left top, right top, color-stop(0%, #ffaf4b), color-stop(100%, #ff920a));
-  background: -webkit-linear-gradient(left, #ffaf4b 0%, #ff920a 100%);
-  background: -o-linear-gradient(left, #ffaf4b 0%, #ff920a 100%);
-  background: -ms-linear-gradient(left, #ffaf4b 0%, #ff920a 100%);
-  background: linear-gradient(to right, #ffaf4b 0%, #ff920a 100%);
-  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffaf4b', endColorstr='#ff920a', GradientType=1 );
-  border: 3px solid blue;
-  font-size: 2.5em; }
-
 .game4container {
   background: url("../img/background_game4.png");
   background-size: cover;
@@ -6426,8 +6419,7 @@ footer {
 .upCont4 {
   display: flex;
   width: 95%;
-  height: 60%;
-  border: 1px solid green;
+  height: 80%;
   z-index: 0;
   display: flex;
   align-items: flex-end; }
@@ -6441,21 +6433,20 @@ footer {
   display: flex;
   width: 95%;
   height: 15%;
-  border: 1px solid red;
   z-index: 0; }
 
 .downCont4 > ul {
-  width: 80%;
+  width: 100%;
   display: flex;
   flex-direction: row;
   justify-content: space-around;
-  align-items: center; }
+  align-items: flex-end; }
 
 .downCont4 > ul > li {
   list-style-type: none;
   background: yellow;
   color: blue;
-  padding: 10px;
+  padding: 15px 20px;
   border-radius: 50%;
   border: 3px solid blue; }
 
