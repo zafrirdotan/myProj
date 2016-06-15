@@ -3,7 +3,7 @@ var gChals = [
     {
         id: 'game1',
         name: 'The Garden',
-        isSolved: true
+        isSolved: false
     },
     {
         id: 'game2',
@@ -25,9 +25,12 @@ var gChals = [
 function init(){
     $('.firstLayer').css('zIndex',0);
     $('.firstLayer').hide();
-    
     $('.boardContainer').css('zIndex',1);
-    
+    renderChals(gChals,'.boardContainer');
+    var name = prompt('enter your name');
+    localStorage.setItem('currname',name);    
+    localStorage.setItem(name,JSON.stringify(gChals));
+      
 }
 
 // progress();
@@ -76,7 +79,6 @@ function renderChals(mat,selector) {
 
 
 
-renderChals(gChals,'.boardContainer');
 
 function redirect(el){
     

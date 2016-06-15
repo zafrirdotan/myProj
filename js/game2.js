@@ -1,4 +1,14 @@
 var numToPlace = [];
+var gChals = JSON.parse(localStorage.getItem('daniel'));
+
+function init(){
+    // console.log('userRecord: ', userRecord);
+    // console.log('res',userRecord[1]);
+    console.log('gchals: ',gChals);
+    
+    
+}
+
 function renderUpContain(){
     var elContainer = document.querySelector('.upCont2');
     var strHTML ='<ul>'
@@ -28,9 +38,7 @@ function renderDownContain(){
         elContainer.innerHTML = strHTML;
         console.log('strHTML: ',strHTML);
 }
-renderUpContain();
-renderDownContain();
-readyDragDrop();
+
 
 
 function readyDragDrop(){
@@ -82,11 +90,21 @@ function isWin(){
         });
     if (win){
         alert('WIN');
-        gState.currChalId = 'game3';
+        gChals.currChalId = 'game3';
         gChals[1].isSolved = true;
+        localStorage.setItem('daniel',JSON.stringify(gChals));
+        console.log('gchals after win: ',gChals);
+        
+        
     }
     else{
         console.log('not win yet');
           
     } 
 }
+
+
+init();
+renderUpContain();
+renderDownContain();
+readyDragDrop();
