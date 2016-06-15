@@ -6279,10 +6279,15 @@ footer {
   background-size: cover;
   margin: 5px;
   display: flex;
-  flex-direction: column;
+  flex-wrap: wrap;
   height: 95vh;
   width: 95vw;
   border: 1px solid blue; }
+
+.statusGame2 {
+  background: blue;
+  height: 18%;
+  width: 18%; }
 
 .downCont2 {
   display: flex;
@@ -6297,7 +6302,7 @@ footer {
 
 @media (max-width: 550px) {
   .downCont2 {
-    height: 100%; } }
+    height: 80%; } }
 
 .downCont2 > ul {
   width: 100%;
@@ -6333,7 +6338,7 @@ footer {
 
 .upCont2 {
   display: flex;
-  width: 95%;
+  width: 80%;
   height: 20%;
   border: 1px solid red; }
 
@@ -6348,12 +6353,12 @@ footer {
   margin: 2px;
   list-style-type: none;
   width: 10%;
-  height: 20%;
-  font-size: 2.5em;
+  font-size: 2em;
   background: white;
   border: 3px solid blue; }
 
 #drag1, #drag2 {
+  width: 9%;
   color: yellow;
   border: 3px solid blue;
   background: #ffaf4b;
@@ -6364,11 +6369,15 @@ footer {
   background: -ms-linear-gradient(left, #ffaf4b 0%, #ff920a 100%);
   background: linear-gradient(to right, #ffaf4b 0%, #ff920a 100%);
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffaf4b', endColorstr='#ff920a', GradientType=1 );
-  width: 20%;
-  height: 15%;
+  height: 40%;
   padding: 1px;
   margin: 5px;
   list-style-type: none; }
+
+@media (max-width: 550px) {
+  #drag1, #drag2 {
+    height: 45%;
+    width: 15%; } }
 
 #li1, #li2 {
   color: yellow;
@@ -6390,10 +6399,6 @@ footer {
 @media (max-width: 550px) {
   #li1, #li2 {
     width: 15%; } }
-
-#drag1, #drag2 {
-  width: 55px;
-  height: 55px; }
 
 @-ms-keyframes wiggle {
   0% {
