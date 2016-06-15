@@ -14,16 +14,29 @@ var gChals = [
         id: 'game3',
         name: 'The Beach',
         isSolved: false
+    },
+    {
+        id: 'game4',
+        name: 'The Mountain ',
+        isSolved: false
     }
 ];
 
-progress();
-function progress(){
-    var game1 = $('#game1');
-    var game2 = $('#game2');
-    // game2.click = null;
-    console.log('game1: ',game1);
-    console.log('gstate: ',gState);
+function init(){
+    $('.firstLayer').css('zIndex',0);
+    $('.firstLayer').hide();
+    
+    $('.boardContainer').css('zIndex',1);
+    
+}
+
+// progress();
+// function progress(){
+//     var game1 = $('#game1');
+//     var game2 = $('#game2');
+//     // game2.click = null;
+//     console.log('game1: ',game1);
+//     console.log('gstate: ',gState);
     
     
     
@@ -33,11 +46,17 @@ function progress(){
 
 // });
     
-}
+// }
 function getChals() {
     
 }
-function getChalById(chalId) {}
+
+function getChalById(chalId) {
+    var obj = gChals.filter(function ( obj ) {
+    return obj.id === chalId;
+})[0];
+}
+
 function reportSolved(chalId){}
 
 
