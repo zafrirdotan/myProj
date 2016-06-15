@@ -29,7 +29,12 @@ function renderSheeps(){
     var elContainer = document.querySelector('.upCont4');
     var strHTML ='';
     for (var i = 0;i < rand ; i++){
-        strHTML += '<img src="img/sheep-game4.png" alt="">' 
+        if (i%2 === 0){
+            strHTML += '<img src="img/sheep-game4new.png" alt="">' 
+        } else {
+            strHTML += '<img src="img/sheep-game4reverse.png" alt="">' 
+            
+        }
     }
     elContainer.innerHTML = strHTML;
 }
