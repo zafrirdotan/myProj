@@ -3,7 +3,7 @@ var gChals = [
     {
         id: 'game1',
         name: 'The Garden',
-        isSolved: true
+        isSolved: false
     },
     {
         id: 'game2',
@@ -63,9 +63,9 @@ function renderChals(mat,selector) {
     mat.forEach(function(chal,i){
         strHTML += '<div onclick="redirect(this)" id="' +chal.id + '" class="game '+ chal.id + '">'+ chal.name +'</div>';
     })
-        console.log('str: ',strHTML);
+        // console.log('str: ',strHTML);
         elContainer.innerHTML = strHTML;
-        console.log('elContainer: ', elContainer);
+        // console.log('elContainer: ', elContainer);
     
 }
 
@@ -79,13 +79,17 @@ function redirect(el){
     num2--;
     num2 = 'game' + num2;
     console.log('num2 is: ',num2);
-    
-    var currlevel = gChal.filter(function(cell){
-        return (cell.id === num2)
-    });
-    
-    console.log('currlevel',currlevel[0].isSolved);
-    if (currlevel[0].isSolved){
+    if  (el.id !== 'game1'){
+        var currlevel = gChal.filter(function(cell){
+            return (cell.id === num2)
+        });
+        
+    } else {
+        var currlevel = gChals[0];
+        console.log('currlevel',currlevel);
+        
+    } 
+    if (currlevel.isSolved || el.id === 'game1'){
         var str ='';
         str+=el.id + '.html';
         str = '/C:/coding%20acadmy/sprint2/' + str;

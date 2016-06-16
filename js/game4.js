@@ -1,24 +1,5 @@
 var numOfSheeps;
 
-renderChoises();
-renderSheeps();
-
-
-$('#choise1,#choise2,#choise3,#choise4,#choise5').click(function(){
-    $('body').click(function( event ) {
-        var str = event.target.id;
-        str = '#' + str;
-        var num = parseInt($(str).text().match(/\d+/)[0], 10); 
-        if (num === numOfSheeps) {
-            console.log('WIN');
-            alert('WIN');
-        }
-        else {
-            console.log('NOT');
-            alert('NOT');
-        }                     
-    });
-});
 
 
 function renderSheeps(){
@@ -46,3 +27,22 @@ function renderChoises(){
     strHTML +='</ul>';
     elContainer.innerHTML = strHTML;
 }
+
+
+renderChoises();
+renderSheeps();
+$('#choise1,#choise2,#choise3,#choise4,#choise5').click(function(){
+    $('body').click(function( event ) {
+        var str = event.target.id;
+        str = '#' + str;
+        var num = parseInt($(str).text().match(/\d+/)[0], 10); 
+        if (num === numOfSheeps) {
+            console.log('WIN');
+            alert('WIN');
+        }
+        else {
+            console.log('NOT');
+            alert('NOT');
+        }                     
+    });
+});
