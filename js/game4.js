@@ -11,11 +11,14 @@ $('#choise1,#choise2,#choise3,#choise4,#choise5').click(function(){
         var num = parseInt($(str).text().match(/\d+/)[0], 10); 
         if (num === numOfSheeps) {
             console.log('WIN');
+            alert('WIN');
             // gChals[3].isSolved = true;
             
         }
         else {
             console.log('NOT');
+            alert('NOT');
+            
             
         }                     
     
@@ -40,8 +43,6 @@ function renderSheeps(){
 }
 
 function renderChoises(){
-    // var rand = parseInt(Math.random()*5) + 1;
-    // numOfSheeps = rand;
     var elContainer = document.querySelector('.downCont4');
     var strHTML ='<ul>';
     for (var i = 1;i < 6 ; i++){

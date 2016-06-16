@@ -74,6 +74,7 @@ function redirect(el){
     var gChal = JSON.parse(localStorage.getItem('player'));
     console.log('gchal before is: ',gChal);
     var num = el.id;
+    // parseInt($(str).text().match(/\d+/)[0], 10); 
     var num2 = num.charAt(4);
     num2--;
     num2 = 'game' + num2;
