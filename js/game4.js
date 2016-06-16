@@ -12,16 +12,11 @@ $('#choise1,#choise2,#choise3,#choise4,#choise5').click(function(){
         if (num === numOfSheeps) {
             console.log('WIN');
             alert('WIN');
-            // gChals[3].isSolved = true;
-            
         }
         else {
             console.log('NOT');
             alert('NOT');
-            
-            
         }                     
-    
     });
 });
 
